@@ -1,0 +1,64 @@
+﻿<Window x:Class="Arithmetic.Addtion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit" 
+        Title="Addtion Practice" Height="500" Width="700" Loaded="additionLoaded">
+    <!--<Window.Background>
+        <ImageBrush x:Name="bg"  ImageSource="D:\C#\MathZone\MathZone\MathZone\bin\Debug\image\da.jpg" />
+    </Window.Background>-->
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="25">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
+                    <GradientStop Color="Orange" Offset="0.0"/>
+                    <GradientStop Color="Wheat" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Button x:Name="homeBtn" HorizontalAlignment="Right" Click="backButton_Click" Width="73" FontSize="12" FontFamily="Times New Roman" Cursor="Hand" Opacity=".6" Background="Orchid">Home</Button>
+            <Button x:Name="backBtn"  HorizontalAlignment="Right" Click="backButton_Click" Width="73" FontSize="12" FontFamily="Times New Roman" Cursor="Hand" Opacity=".5" Background="Orchid">Back</Button>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Left" Width="150">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Salmon" Offset="0.1"/>
+                    <GradientStop Color="white" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Button x:Name="_2DAddBtn" Click="_2DAddBtn_Click" Margin="0,50,0,0" FontSize="15" FontFamily="Times New Roman" Cursor="Hand" Background="Gainsboro">Adding 2 Numbers
+            </Button>
+            <Button x:Name="_3DAddBtn" Click="_3DAddBtn_Click" Background="Gainsboro" FontSize="15" FontFamily="Times New Roman" Cursor="Hand">Adding 3 Numbers</Button>
+            <Button x:Name="_4DAddBtn" Click="_4DAddBtn_Click" Background="Gainsboro" FontSize="15" FontFamily="Times New Roman" Cursor="Hand">Adding 4 Numbers</Button>
+
+            <RadioButton Margin="10,50,10,0" x:Name="rb1" GroupName="lavel" Content="Start form    0" FontSize="15" FontFamily="Times New Roman" Cursor="Hand" Checked="RadioButton_Checked" />
+            <RadioButton Margin="10,0,10,0"  x:Name="rb2" GroupName="lavel" Content="Start form  500" FontSize="15" FontFamily="Times New Roman" Cursor="Hand" Checked="RadioButton_Checked"/>
+            <RadioButton Margin="10,0,10,0"  x:Name="rb3" GroupName="lavel" Content="Start form 1000" FontSize="15" FontFamily="Times New Roman" Cursor="Hand" Checked="RadioButton_Checked"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Center" Width="160">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Salmon" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Button x:Name="chckBtn" Click="chckBtn_Click" Margin="0,50,0,0" Background="Gainsboro" FontSize="15" FontFamily="Times New Roman" Cursor="Hand">Check Ans</Button>
+            <Label x:Name="cmntlbl" FontSize="12" FontFamily="Times New Roman"></Label>
+            <Button x:Name="ViewBtn" Click="viewBtn_Click" Background="Gainsboro" FontSize="15" FontFamily="Times New Roman" Cursor="Hand">View Ans</Button>
+            <Button x:Name="nextBtn" Click="nextBtn_Click" Background="Gainsboro" FontSize="15" FontFamily="Times New Roman" Cursor="Hand">Next</Button>
+        </StackPanel>
+        <StackPanel Opacity="0.9">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1.2" StartPoint="0.5,-0.1">
+                    <GradientStop Color="Orange" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label x:Name="lbl4" Margin="0, 40,0,0" Content="4" HorizontalContentAlignment="Center" FontSize="25" FontFamily="Times New Roman"/>
+            <Label x:Name="lbl3" Margin="0,-10,0,0" Content="3" HorizontalContentAlignment="Center" FontSize="25" FontFamily="Times New Roman"/>
+            <Label x:Name="lbl2" Margin="0,-10,0,0" Content="2" HorizontalContentAlignment="Center" FontSize="25" FontFamily="Times New Roman"/>
+            <Label x:Name="lbl1" Margin="-55,-10,0,0" Content="+       1" HorizontalContentAlignment="Center" FontSize="25" FontFamily="Times New Roman"/>
+            <Label x:Name="lbl_" Margin="-50,-15,0,0" Content="________________________________________" HorizontalContentAlignment="Center"/>
+            <toolkit:IntegerUpDown x:Name="AnsField" Margin="-50,0,0,0" Width="115" HorizontalAlignment="Center" FontSize="20" FontFamily="Times New Roman"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

@@ -1,0 +1,47 @@
+﻿<Window x:Class="Game.Game1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="MainWindow" Height="500" Width="750"  Loaded="game_Loaded" ResizeMode="NoResize">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="25">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
+                    <GradientStop Color="Orange" Offset="0.0"/>
+                    <GradientStop Color="Wheat" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Button x:Name="homeBtn" HorizontalAlignment="Right" Click="backButton_Click" Width="73" FontSize="12" FontFamily="Times New Roman" Cursor="Hand" Opacity=".6" Background="Orchid">Home</Button>
+            <Button x:Name="backBtn"  HorizontalAlignment="Right" Click="backButton_Click" Width="73" FontSize="12" FontFamily="Times New Roman" Cursor="Hand" Opacity=".5" Background="Orchid">Back</Button>
+        </StackPanel>
+        <Grid Margin="0,1,0,-1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0.5">
+                    <GradientStop Color="#FFE2A31C" Offset="0"/>
+                    <GradientStop Color="white" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Button x:Name="startBtn" Content="Start" Width="100" Height="30" Margin="-120,200,0,0" Click="startBtn_Click"/>
+            <Button x:Name="cancelBtn" Content="Cancel" Width="100" Height="30" Margin="120,200,0,0" Click="cancelBtn_Click"/>
+            <ProgressBar x:Name="timeBar" HorizontalAlignment="Left" Height="16" Margin="30,250,0,0" VerticalAlignment="Top" Width="625" Foreground="#FFA0F111">
+                <ProgressBar.Background>
+                    <LinearGradientBrush EndPoint="1,0" StartPoint="0,0.5">
+                        <GradientStop Color="#FFE2A31C" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </ProgressBar.Background>
+
+            </ProgressBar>
+            <Label x:Name="statuslbl" Content="Status" Height="50" Width="250" Margin="0,0,0,0" VerticalAlignment="Bottom" FontFamily="Algerian" FontSize="18" Foreground="#FF0C8021"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="50,-60,0,0">
+                <Label x:Name="numlbl1" Content="num1" HorizontalAlignment="Left" Margin="30,0,0,0" FontFamily="Lucida Handwriting" FontSize="25" />
+                <Label x:Name="oprtrlbl" Content="+,-" HorizontalAlignment="Left" Margin="30,0,0,0" FontFamily="Lucida Handwriting" FontSize="25"/>
+                <Label x:Name="numlbl2" Content="num2" HorizontalAlignment="Left" Margin="30,0,0,0" RenderTransformOrigin="0.25,-0.357" FontFamily="Lucida Handwriting" FontSize="25"/>
+                <Label x:Name="equallbl" Content="=" HorizontalAlignment="Left" Margin="30,0,0,0" FontFamily="Lucida Handwriting" FontSize="25"/>
+                <toolkit:IntegerUpDown Name="txtNum" Minimum="0" Margin="30,0,0,0" Height="30" Width="150" FontFamily="Lucida Handwriting" FontSize="25"></toolkit:IntegerUpDown>
+            </StackPanel>
+            <Image x:Name="emoticon" Margin="552,30,70,276" Height="100" Stretch="Fill"/>
+            <Label x:Name="scoreLbl" Content="Score : " Margin="100,40,0,0" Height="30" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Algerian" FontSize="18" Foreground="#FF0C8021"/>
+        </Grid>
+    </DockPanel>
+</Window>

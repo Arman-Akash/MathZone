@@ -1,0 +1,36 @@
+﻿<Window x:Class="Game.MathFight"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Game2" Height="381.618" Width="768.75">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Right">
+            <Button x:Name="backBtn" Click="backButton_Click" Width="70">Back</Button>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Center">
+            <Label x:Name="status" Content="Are you Ready!" FontFamily="Lucida Handwriting" FontSize="20"/>
+            <Button x:Name="startBtn" Click="startButton_Click" Width="70">Start</Button>
+        </StackPanel>
+        <Grid DockPanel.Dock="Left" Width="370" HorizontalAlignment="Stretch">
+            <Label Name="user" Content="User" />
+            <Label Name="usrScorelbl" Content="Score"  Margin="0,20"/>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="numlbl1" Content="num1" HorizontalAlignment="Right"   FontFamily="Lucida Handwriting" FontSize="25"/>
+                <Label x:Name="numlbl2" Content="num2" HorizontalAlignment="Right"   FontFamily="Lucida Handwriting" FontSize="25" />
+                <Label x:Name="_lbl" Content="_____________________" Margin="0,-35,0,0" HorizontalAlignment="Right"  FontSize="25" />
+                <toolkit:IntegerUpDown x:Name="AnsField" FontFamily="Lucida Handwriting" ValueChanged="ans_Changed"/>
+                <Button x:Name="submitBtn" Content="Submit" Margin="60,20,0,0" Click="submitBtn_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid DockPanel.Dock="Right">
+            <Label Content="Computer" HorizontalAlignment="Right"/>
+            <Label Name="comScorelbl" Content="Score"  Margin="0,20" HorizontalAlignment="Right" />
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="numlblc1" Content="num1" HorizontalAlignment="Right"   FontFamily="Lucida Handwriting" FontSize="25"/>
+                <Label x:Name="numlblc2" Content="num2" HorizontalAlignment="Right"   FontFamily="Lucida Handwriting" FontSize="25" />
+                <Label x:Name="_lblc" Content="_____________________" Margin="0,-35,0,0" HorizontalAlignment="Right"  FontSize="25" />
+                <TextBox x:Name="AnsFieldc" FontFamily="Lucida Handwriting" IsReadOnlyCaretVisible="True" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="MathZone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="550" Width="750" >
+    <Window.Background>
+        <ImageBrush x:Name="bg"  ImageSource="D:\C#\MathZone\MathZone\MathZone\bin\Debug\image\pooh.jpg" />
+    </Window.Background>
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="arithmaticBtn" Margin="20" Content="Arithmatic" Width="200" Height="80" Opacity="0.7" Click="arithmaticBtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" Background="#FF4E5355" Foreground="BurlyWood" FontSize="22" FontFamily="Times New Roman" Cursor="Hand"/>
+            <Button x:Name="ttBtn" Margin="20" Content="Times Table" Width="200" Height="80" Opacity="0.7" Click="ttBtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" Background="#FF4E5355" Foreground="BurlyWood" FontSize="22" FontFamily="Times New Roman" Cursor="Hand"/>
+            <Button x:Name="gameBtn" Margin="20" Content="Games" Width="200" Height="80" Opacity="0.7" Click="gameBtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" Background="#FF4E5355" Foreground="BurlyWood" FontSize="22" FontFamily="Times New Roman" Cursor="Hand"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="unitsBtn" Margin="20" Content="      Units &#x0a;        and &#x0a;Measurements" Width="200" Height="80" Opacity="0.7" Click="unitsBtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" Background="#FF4E5355" Foreground="BurlyWood" FontSize="22" FontFamily="Times New Roman" Cursor="Hand"/>
+            <Button x:Name="GeometryBtn" Margin="20" Content="Basic Geometry" Width="200" Height="80" Opacity="0.7" Click="geometryBtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" Background="#FF4E5355" Foreground="BurlyWood" FontSize="22" FontFamily="Times New Roman" Cursor="Hand"/>
+            <Button x:Name="biographyBtn" Margin="20" Content="Biography" Width="200" Height="80" Opacity="0.7" Click="biographyBtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave" Background="#FF4E5355" Foreground="BurlyWood" FontSize="22" FontFamily="Times New Roman" Cursor="Hand"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

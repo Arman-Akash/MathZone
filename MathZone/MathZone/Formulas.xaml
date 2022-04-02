@@ -1,0 +1,28 @@
+﻿<Window x:Class="MathZone.Formulas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Units And Measurements" Height="720" Width="650" WindowState="Maximized">
+    <DockPanel>
+        <Button x:Name="backBtn" Content="Back" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="60" Click="backBtn_Click"/>
+        <ScrollViewer>
+            <StackPanel>
+                <Label Content="Units" Foreground="BlueViolet"  FontSize="18" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <StackPanel>
+                    <Expander x:Name="lenghtEx" Header="Length"  Margin ="23,0,23,5" VerticalAlignment="Top" Background="WhiteSmoke" BorderBrush="#FF2E6A12" Foreground="#FF213F5D"  FontSize="18" FontFamily="Showcard Gothic" Expanded="lenghtEx_Expanded" />
+                    <Expander x:Name="areaEx" Header="Area"  Margin ="23,5" Background="WhiteSmoke" BorderBrush="#FF2E6A12" Foreground="#FF213F5D"  FontSize="18" FontFamily="Showcard Gothic" Expanded="areaEx_Expanded" />
+                    <Expander x:Name="volumeEx" Header="Volume" Margin ="23,5" Background="WhiteSmoke" BorderBrush="#FF2E6A12" Foreground="#FF213F5D"  FontSize="18" FontFamily="Showcard Gothic" Expanded="volumeEx_Expanded"/>
+                    <Expander x:Name="weightEx" Header="Weight" Margin ="23,5" Background="WhiteSmoke" BorderBrush="#FF2E6A12" Foreground="#FF213F5D" FontSize="18" FontFamily="Showcard Gothic" Expanded="weightEx_Expanded"/>
+                    <Expander x:Name="temperatureEx" Header="Temperature"  Margin ="23,5" Background="WhiteSmoke" BorderBrush="#FF2E6A12" Foreground="#FF213F5D" FontSize="18" FontFamily="Showcard Gothic" Expanded="temperatureEx_Expanded"/>
+                    <Expander x:Name="liquidCpEx" Header="Liquid Capacity" Margin ="23,5" Background="WhiteSmoke" BorderBrush="#FF2E6A12" Foreground="#FF213F5D" FontSize="18" FontFamily="Showcard Gothic" Expanded="LCEx_Expanded"/>
+                    <Expander x:Name="TimeEx" Header="Time" Margin ="23,5" Background="WhiteSmoke" BorderBrush="#FF2E6A12" Foreground="#FF213F5D" FontSize="18" FontFamily="Showcard Gothic" Expanded="timeEx_Expanded"/>
+                </StackPanel>
+                <Label Content="Geometric Formulas" Foreground="BlueViolet"  FontSize="18" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <StackPanel>
+                    <Expander x:Name="perimeterEx" Header="parimeter"  Margin ="23,0,23,5" VerticalAlignment="Top" Background="WhiteSmoke" BorderBrush="#FF2E6A12" Foreground="#FF213F5D"  FontSize="18" FontFamily="Showcard Gothic" Expanded="perimeterEx_Expanded" />
+                    <Expander x:Name="geoAreaEx" Header="Area"  Margin ="23,5" Background="WhiteSmoke" BorderBrush="#FF2E6A12" Foreground="#FF213F5D"  FontSize="18" FontFamily="Showcard Gothic" Expanded="geoAreaEx_Expanded" />
+                    <Expander x:Name="geoVolumeEx" Header="Volume" Margin ="23,5" Background="WhiteSmoke" BorderBrush="#FF2E6A12" Foreground="#FF213F5D"  FontSize="18" FontFamily="Showcard Gothic" Expanded="geoVolumeEx_Expanded"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

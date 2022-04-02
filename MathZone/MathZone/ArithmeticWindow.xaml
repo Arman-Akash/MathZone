@@ -1,0 +1,33 @@
+﻿<Window x:Class="Arithmetic.ArithmeticWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="550" Width="750">
+    <Window.Background>
+        <ImageBrush x:Name="bg"  ImageSource="D:\C#\MathZone\MathZone\MathZone\bin\Debug\image\aw.jpg" />
+    </Window.Background>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="25">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
+                    <GradientStop Color="Orange" Offset="0.0"/>
+                    <GradientStop Color="Wheat" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Button x:Name="homeBtn" HorizontalAlignment="Right" Click="backButton_Click" Width="73" FontSize="12" FontFamily="Times New Roman" Cursor="Hand" Opacity=".6" Background="Orange">Home</Button>
+            <Button x:Name="backBtn"  HorizontalAlignment="Right" Click="backButton_Click" Width="73" FontSize="12" FontFamily="Times New Roman" Cursor="Hand" Opacity=".5" Background="Orange">Back</Button>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Opacity="0.9">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Orange" Offset="-0.3"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Button x:Name="Additionbtn" Content="Addition" Margin="10,30,10,10" Width="200" Height="70" Opacity="0.7" Background="#FF4E5355" Foreground="White" FontSize="22" FontFamily="Times New Roman" Cursor="Hand" Click="Additionbtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave"/>
+            <Button x:Name="subtractBtn" Content="subtraction" Margin="10" Height="70" Opacity="0.7" Background="#FF4E5355" Foreground="White" FontSize="22" FontFamily="Times New Roman" Cursor="Hand" Click="subtractBtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave"/>
+            <Button x:Name="mulBtn"  Content="Multiplication" Margin="10" Height="70" Opacity="0.7" Background="#FF4E5355" Foreground="White" FontSize="22" FontFamily="Times New Roman" Cursor="Hand" Click="mulBtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave"/>
+            <Button x:Name="divBtn" Content="Division" Margin="10" Height="70" Opacity="0.7" Background="#FF4E5355" Foreground="White" FontSize="22" FontFamily="Times New Roman" Cursor="Hand" Click="divBtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave"/>
+            <Button x:Name="AddTutorbtn" Content="Addition Tutorial" Margin="10" Height="70" Opacity="0.7" Background="#FF4E5355" Foreground="White" FontSize="22" FontFamily="Times New Roman" Cursor="Hand" Click="AddTutorialbtn_Click" MouseEnter="Btn_MouseEnter" MouseLeave="Btn_MouseLeave"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="Arithmetic.AdditionTutorial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ytp="clr-namespace:WpfYoutubePlayer;assembly=WpfYoutubePlayer"
+        Title="AdditionTutorial" Height="300" Width="400" Loaded="Window_Loaded">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Right">
+            <Button x:Name="backBtn" Click="backButton_Click" Width="70">Back</Button>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom" Height="20" Orientation="Horizontal">
+            <!--<Button />-->
+        </StackPanel>
+        <!--<WebBrowser Name="vedio"></WebBrowser>-->
+        <!--<ytp:YoutubePlayer SourceUpdated="https://www.youtube.com/watch?v=BZF7vJfsshQ"> </ytp:YoutubePlayer>-->        
+    </DockPanel>
+</Window>

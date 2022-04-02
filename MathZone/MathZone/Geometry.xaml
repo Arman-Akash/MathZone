@@ -1,0 +1,106 @@
+﻿<Window x:Class="MathZone.Geometry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Geometry" Height="750" Width="880" Loaded="Window_Loaded" WindowState="Maximized">
+    <Window.Background>
+        <ImageBrush x:Name="bg"  ImageSource="D:\C#\MathZone\MathZone\MathZone\bin\Debug\image\gm.jpg" />
+    </Window.Background>
+    <DockPanel Margin="0,0,2,0">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="25">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
+                    <GradientStop Color="Orange" Offset="0.0"/>
+                    <GradientStop Color="Wheat" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Button x:Name="backBtn"  HorizontalAlignment="Right" Click="backButton_Click" Width="73" FontSize="12" FontFamily="Times New Roman" Cursor="Hand" Opacity=".5" Background="Orchid">Back</Button>
+        </StackPanel>
+        <ScrollViewer>
+            <StackPanel Height="3000" Background="Pink" Margin="40">
+                <Label Content="Line" FontSize="25" FontFamily="Showcard Gothic" FontWeight="Bold" />
+                <Label x:Name="lineDefinatn" Margin="15,0" Content="Types of line" FontSize="15" FontFamily="Showcard Gothic" />
+                <Canvas Margin="10,0">
+                    <Line X1="0" Y1="0" X2="400" Y2="0" Canvas.Left="25" Canvas.Top="10" StrokeThickness="5" Stroke="Black"/>
+                    <Label Canvas.Left="100" Canvas.Top="15" Content="Figure: Straight line" />
+                    <Path Canvas.Left="25" Canvas.Top="25" Stroke="Black" StrokeThickness="5">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathGeometry.Figures>
+                                    <PathFigureCollection>
+                                        <PathFigure StartPoint="0,0">
+                                            <PathFigure.Segments>
+                                                <PathSegmentCollection>
+                                                    <PolyBezierSegment Points="10,30, 20, 100, 50, 80, 80, 10, 130, 90, 400, 20" />
+                                                </PathSegmentCollection>
+                                            </PathFigure.Segments>
+                                        </PathFigure>
+                                    </PathFigureCollection>
+                                </PathGeometry.Figures>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Label Canvas.Left="100" Canvas.Top="100" Content="Figure: Curve" />
+            </Canvas>
+                <Label Margin="0,150,0,0" Content="Quadrilaterals" FontSize="25" FontFamily="Showcard Gothic" FontWeight="Bold" />
+                <Label Margin="25,0,0,0" x:Name="QuadDefinatn" Content="Quad Defination"/>
+                <Label Margin="25,0,0,0" Content="1. Square" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="45,0,0,0" x:Name="squareDefinatn" Content="Defination" />
+                <Canvas>
+                    <Rectangle Canvas.Left="140" Canvas.Top="5"  Width="100" Height="100" Fill="Transparent" StrokeThickness="3" Stroke="Black"/>
+                </Canvas>
+                <Label Margin="25,110,0,0" Content="1. Rhombus" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="70,0,0,0" x:Name="rhmbsDefinatn" Content="Defination" />
+                <Canvas>
+                    <Polygon Points="320,10, 300, 110, 200, 110, 220,10" Fill="Transparent" StrokeThickness="3" Stroke="Black"/>
+                </Canvas>
+                <Label Margin="25,150,0,0" Content="3. Rectangle" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="70,0,0,0" x:Name="rectangleDefinatn" Content="Defination" />
+                <Canvas>
+                    <Rectangle Canvas.Left="140" Canvas.Top="5"  Width="200" Height="100" Fill="Transparent" StrokeThickness="3" Stroke="Black"/>
+                </Canvas>
+                <Label Margin="25,110,0,0" Content="4. Parallelogram" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="70,0,0,0" x:Name="pgDefinatn" Content="Defination" />
+                <Canvas>
+                    <Polygon Points="320,10, 300, 110, 100, 110, 120,10" Fill="Transparent" StrokeThickness="3" Stroke="Black"/>
+                </Canvas>
+                <Label Margin="25,110,0,0" Content="5. Trapezoid" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="70,0,0,0" x:Name="tzDefinatn" Content="Defination" />
+                <Canvas>
+                    <Polygon Points="280,10, 320, 110, 120, 110, 120,10" Fill="Transparent" StrokeThickness="3" Stroke="Black"/>
+                    <Polygon Points="400,10, 350, 110, 540, 110, 500,10" Fill="Transparent" StrokeThickness="3" Stroke="Black"/>
+                    <Polygon Points="610,20, 580, 110, 750, 110, 720,10" Fill="Transparent" StrokeThickness="3" Stroke="Black"/>
+                    <Label Canvas.Left="150" Canvas.Top="120" Content="Figure: trapezoid"/>
+                    <Label Canvas.Left="360" Canvas.Top="120" Content="Figure: isosceles trapezoid"/>
+                    <Label Canvas.Left="600" Canvas.Top="120" Content="Figure: trapezium"/>
+                </Canvas>
+                <Label Margin="0,150,0,0" Content="Triangle" FontSize="25" FontFamily="Showcard Gothic" FontWeight="Bold" />
+                <Label Margin="50,0,0,0" x:Name="triangleDefinatn" Content="Defination"/>
+                <Label Margin="20,0,0,0" Content="By lengths of sides" FontSize="22" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="25,0,0,0" Content="1. Equilateral" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="70,0,0,0" x:Name="etDefinatn" Content="Defination" />
+                <Image Margin="-200,0,0,0" x:Name="etshapes" Height="150" Width="300" Source="D:\C#\MathZone\MathZone\MathZone\shapes\Triangle.Equilateral.png"/>
+                <Label Margin="25,0,0,0" Content="2. Isosceles" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="70,0,0,0" x:Name="iscDefinatn" Content="Defination" />
+                <Image Margin="-200,0,0,0" x:Name="istshapes" Height="150" Width="300" Source="shapes/Triangle.Isosceles.png"/>
+                <Label Margin="25,0,0,0" Content="3. Scalene" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="70,0,0,0" x:Name="sclnDefinatn" Content="Defination" />
+                <Image Margin="-200,0,0,0" x:Name="stshapes" Height="150" Width="300" Source="shapes/Triangle.scalene.png"/>
+                <Label Margin="20,0,0,0" Content="By internal angles" FontSize="22" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="25,0,0,0" Content="1. Right Triangle" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="70,0,0,0" x:Name="rtDefinatn" Content="Defination" />
+                <Image Margin="-200,0,0,0" x:Name="rtshapes" Height="150" Width="300" Source="shapes/Triangle.Right.png"/>
+                <Label Margin="25,0,0,0" Content="2. Obtuse Triangle" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="70,0,0,0" x:Name="otDefinatn" Content="Defination" />
+                <Image Margin="-200,0,0,0" x:Name="otshapes" Height="150" Width="300" Source="shapes/Triangle.Obtuse.png"/>
+                <Label Margin="25,0,0,0" Content="3. Acute Triangle" FontSize="20" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="70,0,0,0" x:Name="atDefinatn" Content="Defination" />
+                <Image Margin="-200,0,0,0" x:Name="atshapes" Height="150" Width="200" Source="shapes/Triangle.Acute.png"/>
+                <Label Content="Circle" FontSize="25" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+                <Label Margin="35,0,0,0" x:Name="circleDefinatn" Content="Defination" />
+                <Canvas>
+                    <Ellipse Canvas.Left="100" Canvas.Top="10" Height="150" Width="150" StrokeThickness="3" Fill="Transparent" Stroke="Black" />
+                </Canvas>
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
